@@ -1,27 +1,13 @@
-// Carrusel de imágenes
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const totalSlides = slides.length;
+// BARRA DE NAVEGACIÓN 
 
-function showNextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % totalSlides;
-    slides[currentSlide].classList.add('active');
-    document.querySelector('.carousel-container').style.transform = `translateX(-${currentSlide * 100}%)`;
-}
+ const navbar = document.getElementById("navbar");
 
-setInterval(showNextSlide, 3000);
-
-document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".slide");
-    let currentIndex = 0;
-  
-    function showNextSlide() {
-      slides[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex + 1) % slides.length; // Cambia al siguiente slide, vuelve al inicio si es el último
-      slides[currentIndex].classList.add("active");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.remove("bg-opacity-30");
+      navbar.classList.add("bg-opacity-100");
+    } else {
+      navbar.classList.remove("bg-opacity-100");
+      navbar.classList.add("bg-opacity-30");
     }
-  
-    setInterval(showNextSlide, 5000); // Cambia cada 5 segundos
   });
-  

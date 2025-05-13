@@ -1,0 +1,33 @@
+ 
+#carousel {
+    background: linear-gradient(to bottom, #734a91, #000000);
+    padding: 50px 0; /* Agregar algo de espacio si es necesario */
+    height: 100vh;
+}
+
+#servicios-especiales {
+    background: linear-gradient(to bottom, #000000, #734a91 );
+    padding: 50px 0; /* Agregar algo de espacio si es necesario */
+    height: 100vh;
+}
+
+.cliente-logo {
+    transition: transform 0.3s ease;
+  }
+  .cliente-logo:hover {
+    transform: scale(1.1);
+  }
+  
+
+  .footer-nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 0.95rem;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+    color: #e0b0ff;
+  }
+  
